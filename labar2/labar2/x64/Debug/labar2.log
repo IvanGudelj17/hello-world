@@ -1,0 +1,5 @@
+﻿  labar2.c
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\labar2\labar2\labar2.c(28,3): warning C4013: 'IspisClana' undefined; assuming extern returning int
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\labar2\labar2\labar2.c(33,6): error C2371: 'IspisClana': redefinition; different basic types
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\labar2\labar2\labar2.c(90,7): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\labar2\labar2\labar2.c(126,8): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
