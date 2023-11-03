@@ -21,6 +21,50 @@ typedef struct Person
 	struct Person* next;
 } Person;
 
+void IspisClana(Person* head);
+void Ispisliste(Person* head);
+void UpisiUlistu(Person* head);
+Person* UnosElementa();
+Person* DodajNaPocetak(Person* head);
+Person* DodajNaKraj(Person* head);
+void PronadiPoPrezimenu(Person* head);
+Person* IzbrisiListu(Person* head);
+Person* DodajNakon(Person* head);
+Person* DodajIspred(Person* head);
+Person* UcitajizDatoteke(Person* head);
+void PocetniMenu(int* odabir);
+int main()
+{
+	Person = { " "," ",'0', NULL };//postavljanje vrijednosti na 0
+	int odabir = 0;
+	Person* head = NULL;
+	PocetniMenu(&odabir);
+
+
+	while (odabir >= 1 && odabir <= 9)
+	{
+		switch (odabir)
+		{
+		case 1: Ispisliste(head); break;
+		case 2: head = DodajNaPocetak(head); break;
+		case 3: head = DodajNaKraj(head); break;
+		case 4: PronadiPoPrezimenu(head); break;
+		case 5: head = IzbrisiListu(head); break;
+		case 6: head = DodajNakon(head); break;
+		case 7: head = DodajIspred(head); break;
+		case 8: UpisiUlistu(head); break;
+		case 9: head = UcitajizDatoteke(head); break;
+
+		default:
+			puts("opcija nije u izboru");
+			break;
+		}
+
+		puts("Unesite novi broj za izvršenje određene radnje (ili bilo koji drugi broj za izlaz):\n");
+		scanf("%d", &odabir);
+	}
+}
+
 void IspisClana(Person* head)
 {
 	printf("%s %s %d\n", head->name, head->surname, head->age);
@@ -262,35 +306,4 @@ void PocetniMenu(int* odabir)
 	scanf("%d", odabir);
 
 
-}
-
-int main()
-{
-	int odabir = 0;
-	Person* head = NULL;
-	PocetniMenu(&odabir);
-
-
-	while (odabir >= 1 && odabir <= 9)
-	{
-		switch (odabir)
-		{
-		case 1: Ispisliste(head); break;
-		case 2: head = DodajNaPocetak(head); break;
-		case 3: head = DodajNaKraj(head); break;
-		case 4: PronadiPoPrezimenu(head); break;
-		case 5: head = IzbrisiListu(head); break;
-		case 6: head = DodajNakon(head); break;
-		case 7: head = DodajIspred(head); break;
-		case 8: UpisiUlistu(head); break;
-		case 9: head = UcitajizDatoteke(head); break;
-
-		default:
-			puts("opcija nije u izboru");
-			break;
-		}
-
-		puts("Unesite novi broj za izvršenje određene radnje (ili bilo koji drugi broj za izlaz):\n");
-		scanf("%d", &odabir);
-	}
 }
