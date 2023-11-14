@@ -1,0 +1,17 @@
+﻿  Labarr4.c
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(133,4): warning C4013: 'createAndInsertAfter' undefined; assuming extern returning int
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(177,24): warning C4013: 'createElement' undefined; assuming extern returning int
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(177,11): warning C4047: 'initializing': 'Position' differs in levels of indirection from 'int'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(197,3): warning C4013: 'deleteAfter' undefined; assuming extern returning int
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(216,48): warning C4047: 'function': 'char' differs in levels of indirection from 'char [100]'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(216,42): warning C4024: 'ParseStringInToList': different types for formal and actual parameter 2
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(223,48): warning C4047: 'function': 'char' differs in levels of indirection from 'char [100]'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(223,42): warning C4024: 'ParseStringInToList': different types for formal and actual parameter 2
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(251,33): warning C4133: 'function': incompatible types - from 'int *' to 'const char *const '
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(239,8): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'char'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(344,2): warning C4013: 'insertAfter' undefined; assuming extern returning int
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\Labarr4\Labarr4.c(338,11): warning C4047: 'initializing': 'Position' differs in levels of indirection from 'int'
+Labarr4.obj : error LNK2019: unresolved external symbol createElement referenced in function createAndInsertAfter
+Labarr4.obj : error LNK2019: unresolved external symbol deleteAfter referenced in function freeMemory
+Labarr4.obj : error LNK2019: unresolved external symbol insertAfter referenced in function createAndInsertAfter
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\Labarr4\x64\Debug\Labarr4.exe : fatal error LNK1120: 3 unresolved externals
