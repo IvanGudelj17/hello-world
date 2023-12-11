@@ -1,0 +1,2 @@
+﻿FileName.obj : error LNK2019: unresolved external symbol pop referenced in function main
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar7\x64\Debug\labar7.exe : fatal error LNK1120: 1 unresolved externals
