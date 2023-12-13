@@ -1,2 +1,7 @@
-﻿FileName.obj : error LNK2019: unresolved external symbol pop referenced in function main
-C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar7\x64\Debug\labar7.exe : fatal error LNK1120: 1 unresolved externals
+﻿  FileName.c
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar7\labar7\FileName.c(124,37): warning C4133: 'function': incompatible types - from 'LevelStack *' to 'PositionInDirectory'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar7\labar7\FileName.c(125,86): warning C4020: 'puts': too many actual parameters
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar7\labar7\FileName.c(258,25): warning C4133: '=': incompatible types - from 'CurrentPositionLevelStack' to 'PositionInDirectory'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar7\labar7\FileName.c(248,28): warning C4133: 'initializing': incompatible types - from 'PositionInDirectory' to 'CurrentPositionLevelStack'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar7\labar7\FileName.c(271,14): warning C4047: 'return': 'int' differs in levels of indirection from 'void *'
+  labar7.vcxproj -> C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar7\x64\Debug\labar7.exe

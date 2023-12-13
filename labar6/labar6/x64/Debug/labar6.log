@@ -1,0 +1,6 @@
+﻿  labar5.c
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar6\labar6\labar5.c(121,23): warning C4047: 'return': 'ReceiptPosition' differs in levels of indirection from 'int'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar6\labar6\labar5.c(303,30): warning C4133: 'function': incompatible types - from 'ReceiptPosition' to 'char *'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar6\labar6\labar5.c(305,29): warning C4133: 'function': incompatible types - from 'ReceiptPosition' to 'char *'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar6\labar6\labar5.c(327): warning C4716: 'articleInBetweenDates': must return a value
+  labar6.vcxproj -> C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\hello-world\labar6\x64\Debug\labar6.exe

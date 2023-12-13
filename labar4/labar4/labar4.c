@@ -191,10 +191,10 @@ int addPoly(Position resultHead, Position firstElementPoly1, Position firstEleme
 
 int multiplyPoly(Position resultHead, Position firstElementPoly1, Position firstElementPoly2) {
 
-	if (firstElementPoly1 != NULL || firstElementPoly2 != NULL) {
-		for (Position currentPoly1 = firstElementPoly1; currentPoly1 != NULL; currentPoly1 = currentPoly1->next) {
-			for (Position currentPoly2 = firstElementPoly2; currentPoly2 != NULL; currentPoly2 = currentPoly2->next) {
-				Position newElement = createElement(currentPoly1->coefficient * currentPoly2->coefficient, currentPoly1->exponent * currentPoly2->exponent);
+if (firstElementPoly1 != NULL || firstElementPoly2 != NULL) {
+	for (Position currentPoly1 = firstElementPoly1; currentPoly1 != NULL; currentPoly1 = currentPoly1->next) {
+	for (Position currentPoly2 = firstElementPoly2; currentPoly2 != NULL; currentPoly2 = currentPoly2->next) {
+		Position newElement = createElement(currentPoly1->coefficient * currentPoly2->coefficient, currentPoly1->exponent * currentPoly2->exponent);
 
 				if (newElement == NULL) {
 					return EXIT_FAILURE;
@@ -228,21 +228,21 @@ int parseStringIntoList(Position head, char* buffer) {
 	Position newElement = NULL;
 
 	while (strlen(currentBuffer) > 0) {
-		status = sscanf(currentBuffer, " %dx^%d %n", &coefficient, &exponent, &numBytes);
+		status = sscanf(currentBuffer, " %dx^%d %n", &coefficient, &exponent, &numBytes);//pravilno citanje
 
 		if (status != 2) {
 			printf("File not good.\n");
 			return EXIT_FAILURE;
 		}
 
-		newElement = createElement(coefficient, exponent);
+		newElement = createElement(coefficient, exponent);//dodavanje i stavranje elementa
 		if (newElement == NULL) {
 			return EXIT_FAILURE;
 		}
 
-		insertSorted(head, newElement);
+		insertSorted(head, newElement);//unosenjee elementa au lsitu
 
-		currentBuffer += numBytes;
+		currentBuffer += numBytes;///pomicanje stanja u u fajlu, do kuda sam oprocita
 	}
 
 	return EXIT_SUCCESS;

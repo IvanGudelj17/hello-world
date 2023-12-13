@@ -101,7 +101,7 @@ int main()
 		
 			/*while (currentdir.next != NULL && flagforNameSearch == 0) //je li mogu ovako provjeraat da li postoji ime u stablu
 			{
-				if (strcmp(DirName, currentdir.DirectoryName) ==1)
+				if (strcmp(DirName, currentdir.DirectoryName) ==1 && flagforNameSearch == 0)
 				{
 					flagforNameSearch = 1;
 					puts("\nIME POSTOJI...\n");
@@ -111,7 +111,7 @@ int main()
 					puts("\nIME  NE POSTOJI...\n"); break;
 
 				}
-				currentdir=*(currentdir.next);
+				currentdir=*(currentdir.next);//jel se mogu kako drukcije snjim kretat kroz direktorije
 			}
 
 			*/
@@ -121,7 +121,7 @@ int main()
 	case 3://ulazak u direktroiji prije
 			if (currentDirectory != rootDirectory)
 			{
-				currentDirectory = pop(&headLevelStack);
+				currentDirectory = popFronStack(&headLevelStack);
 				puts("succsassfully entered Directory, you are currently in %s", currentDirectory->DirectoryName);
 				break;
 			}
@@ -154,19 +154,19 @@ int main()
 PositionInDirectory createdirectory(char name[MAX_LENGHT_SIZE])
 {
 	PositionInDirectory newdirectory = NULL;
-	newdirectory = (PositionInDirectory)malloc(sizeof(PositionInDirectory));
+	newdirectory = (PositionInDirectory)malloc(sizeof(PositionInDirectory));//alocirana memorija za novi clan koji cu dodat na stog
 
 	if (newdirectory == NULL)// provjera uspjesnosti stavrnaja direktorija
 	{
 		puts("can not make new directory");
-		return NULL;// ako vracam null, kao da pošto ne moze se napraviti novi, postavi ga na zadnji i ppokazivaj null
+		return NULL;// ako vracam null, pošto ne moze se napraviti novi, postavi ga na zadnji i ppokazivaj null
 
 
 	}
 	else
 	{
 		strcpy(newdirectory->DirectoryName, name);
-		if (newdirectory->DirectoryName == 0)// provjera uspjesnosti postavljanja imena
+		if (newdirectory->DirectoryName == 0)// provjera uspjesnosti postavljanja imena, je li ga mogu ovako usporedit s 0, posto je char,a inicijalizran je tako
 		{
 			puts(" problem with setting name of direcetory");
 			return NULL;
@@ -187,6 +187,7 @@ PositionInDirectory createdirectory(char name[MAX_LENGHT_SIZE])
 }
 int ListDirectoryItems(PositionInDirectory currentDirectory)
 {
+	/*ispis svih pod direktorija odredenog direktorija*/
 	printf("Contents of directory -- '%s' --\n", currentDirectory->DirectoryName);
 	PositionInDirectory subdirectory = currentDirectory->subDirectories;
 	while (subdirectory != NULL)

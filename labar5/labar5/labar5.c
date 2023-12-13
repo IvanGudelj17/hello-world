@@ -8,6 +8,7 @@ rezultat. Stog je potrebno realizirati preko vezane liste.*/
 #define MAX_SIZE (50)
 #define MAX_LENGTH (1024)
 
+
 struct _stackElement;
 typedef struct _stackElement* Position;
 typedef struct _stackElement {
@@ -55,13 +56,16 @@ int calculatePostfixFromFile(Position head, char* fileName, double* result) {
 
 int readFile(char* fileName, char* buffer) {
     FILE* filePointer = NULL;
+
+
     filePointer = fopen(fileName, "r");
+
     if (!filePointer) {
-        perror("Can't open file!\n");
+        perror("Can't open file!\n");//uloga ovoga, inace?
         return NULL;
     }
 
-    fgets(buffer, MAX_LENGTH, filePointer);
+    fgets(buffer, MAX_LENGTH, filePointer);//ako je dobro ucitano kroz if, nek procita liniju i ispise
     printf("|%s|\n", buffer);
 
     fclose(filePointer);
@@ -84,7 +88,8 @@ int parseStringIntoPostfix(Position head, char* buffer, double* result)
             sscanf(currentBuffer, " %c %n", &operation, &numBytes);
             status = popAndPerformOperation(head, operation, result);
 
-            if (status != EXIT_SUCCESS) {
+            if (status != EXIT_SUCCESS) //funkcija ce se izvrsit ako je popfunkc vratila 1
+            {
                 return EXIT_FAILURE;
             }
 
@@ -114,7 +119,7 @@ int checkStackAndExtractResult(Position head, double* result) {
     }
 
     if (head->next) {
-        system("cls"); //clear screen
+       
         printf("Invalid postfix, please check the file!\r\n");
         return EXIT_FAILURE;
     }
@@ -126,28 +131,31 @@ Position createStackElement(double number)
 {
     Position newStackElement = NULL;
 
-    newStackElement = (Position)malloc(sizeof(StackElement));
-    if (!newStackElement) {
+    newStackElement = (Position)malloc(sizeof(StackElement));//napravljen prsorotr za novi elem +provjera
+    if (!newStackElement)
+    {
         perror("Can't allocate memory!\n");
         return NULL;
     }
 
-    newStackElement->number = number;
+    newStackElement->number = number;//postavljanje date na novi eelement
     newStackElement->next = NULL;
 
     return newStackElement;
 }
 
-int push(Position head, Position newStackElement) {
+int push(Position head, Position newStackElement) 
+{
     newStackElement->next = head->next;
     head->next = newStackElement;
 
     printStack(head->next);
 
-    return EXIT_SUCCESS;
+    return EXIT_SUCCESS;//1
 }
 
-int printStack(Position first) {
+int printStack(Position first)
+{
     Position current = first;
 
     while (current) {
@@ -159,15 +167,17 @@ int printStack(Position first) {
     return EXIT_SUCCESS;
 }
 
-int pop(Position head, double* result) {
+int pop(Position head, double* result) //fukcija za brisnaje elemenata sa stoga POP
+{
     Position toDelete = NULL;
 
-    toDelete = head->next;
-    if (!toDelete) {
+    toDelete = head->next;//brisem sljedecie clan
+    if (!toDelete)//ako je stack prazana vrati -1, izadi iz funkcije
+    {
         printf("Stack is empty! Nothing to pop!\n");
         return -1;
     }
-
+    //brisanje clana i spajanje s postifixom rezultatq
     head->next = toDelete->next;
     *result = toDelete->number;
     free(toDelete);
@@ -202,6 +212,11 @@ int popAndPerformOperation(Position head, char operation, double* result) {
         *result = operand2 * operand1;
         break;
     case '/':
+        if (operand1 != 0)
+        {
+            puts("errrro");
+            return EXIT_FAILD;
+        }
         *result = operand2 / operand1;
         break;
     default:
