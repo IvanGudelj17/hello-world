@@ -1,0 +1,5 @@
+﻿  labar10.c
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\ISPIT VJEZBA STRUKTURE\labar1 0\labar1 0\labar10.c(122,15): warning C4133: 'function': incompatible types - from 'char [30]' to 'FILE *'
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\ISPIT VJEZBA STRUKTURE\labar1 0\labar1 0\labar10.c(124,10): warning C4133: 'function': incompatible types - from 'char [30]' to 'FILE *const '
+labar10.obj : error LNK2019: unresolved external symbol PrintCountrylist referenced in function main
+C:\Users\Ivan\OneDrive - Fakultet elektrotehnike, strojarstva i brodogradnje\Desktop\ISPIT VJEZBA STRUKTURE\labar1 0\x64\Debug\labar1 0.exe : fatal error LNK1120: 1 unresolved externals
